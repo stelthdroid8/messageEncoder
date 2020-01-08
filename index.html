@@ -8,17 +8,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Message Encoder</title>
   </head>
   <body>
     <div class="row">
       <div class="col s8 offset-s2">
-        <div class="card-panel">
+        <div class="card-panel hide" id="message-show">
+          <h1 id="decoded-message"></h1>
+          <div><a href="./index.html">Create a new message</a></div>
+        </div>
+        <div class="card-panel" id="input-form">
           <form>
             <label for="">Enter the message</label>
-            <input type="text" name="message" id="message" />
+            <input type="text" name="message-input" id="message-input" />
             <button class="btn" type="submit">Submit</button>
           </form>
+        </div>
+
+        <div class="card-panel hide" id="link">
+          <div>
+            Share this link to decode the message:
+            <input type="text" id="link-input" />
+          </div>
         </div>
       </div>
     </div>
